@@ -10,12 +10,15 @@ Este projeto tem como objetivo a criação e otimização de índices para melho
 O projeto está estruturado da seguinte forma:
 
 - **📜 Script SQL**: Contém a criação dos índices e procedures.
+  
 
 ## 🏗️ Parte 1: Criação de Índices
+
 Os índices foram criados para otimizar as seguintes consultas:
 
+
 ### 📌 Índices Criados:
-1. **🔍 idx_department_id** (Tabela: `employees`, Coluna: `department_id`)
+1️⃣  **🔍 idx_department_id** (Tabela: `employees`, Coluna: `department_id`)
    - 📌 Motivo: Melhora a performance da contagem de funcionários por departamento.
    - 🏎️ Exemplo de consulta otimizada:
      ```sql
@@ -26,14 +29,14 @@ Os índices foram criados para otimizar as seguintes consultas:
      LIMIT 1;
      ```
 
-2. **🌍 idx_department_location** (Tabela: `departments`, Coluna: `city`)
+2️⃣ **🌍 idx_department_location** (Tabela: `departments`, Coluna: `city`)
    - 📌 Motivo: Acelera a busca de departamentos por cidade.
    - 🏎️ Exemplo de consulta otimizada:
      ```sql
      SELECT city, department_name FROM departments;
      ```
 
-3. **👥 idx_employee_department** (Tabela: `employees`, Coluna: `department_id`)
+3️⃣ **👥 idx_employee_department** (Tabela: `employees`, Coluna: `department_id`)
    - 📌 Motivo: Agiliza a recuperação de funcionários por departamento.
    - 🏎️ Exemplo de consulta otimizada:
      ```sql
