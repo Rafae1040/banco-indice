@@ -4,6 +4,7 @@
 Este projeto tem como objetivo a criação e otimização de índices para melhorar o desempenho de consultas SQL no **MySQL**, além da implementação de procedures para manipulação de dados em um banco de dados relacional. O projeto é dividido em duas partes principais:
 
 1. **📊 Criação de Índices**: Implementação de índices para otimizar consultas em tabelas relacionadas a funcionários e departamentos de uma empresa.
+
 2. **⚙️ Procedures para Manipulação de Dados**: Desenvolvimento de uma procedure que permite a inserção, atualização e remoção de registros de funcionários, utilizando uma variável de controle para determinar a ação desejada.
 
 ## 📂 Estrutura do Projeto
@@ -29,12 +30,14 @@ Os índices foram criados para otimizar as seguintes consultas:
      LIMIT 1;
      ```
 
+
 2️⃣ **🌍 idx_department_location** (Tabela: `departments`, Coluna: `city`)
    - 📌 Motivo: Acelera a busca de departamentos por cidade.
    - 🏎️ Exemplo de consulta otimizada:
      ```sql
      SELECT city, department_name FROM departments;
      ```
+
 
 3️⃣ **👥 idx_employee_department** (Tabela: `employees`, Coluna: `department_id`)
    - 📌 Motivo: Agiliza a recuperação de funcionários por departamento.
@@ -44,6 +47,7 @@ Os índices foram criados para otimizar as seguintes consultas:
      FROM employees e
      JOIN departments d ON e.department_id = d.department_id;
      ```
+
 
 ## 🛠️ Parte 2: Procedures para Manipulação de Dados
 Uma procedure chamada `manage_employee` foi criada para permitir operações de inserção, atualização e remoção de registros na tabela `employees`.
