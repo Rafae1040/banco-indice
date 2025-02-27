@@ -48,12 +48,14 @@ Os índices foram criados para otimizar as seguintes consultas:
 ## 🛠️ Parte 2: Procedures para Manipulação de Dados
 Uma procedure chamada `manage_employee` foi criada para permitir operações de inserção, atualização e remoção de registros na tabela `employees`.
 
+
 ### 🔧 Estrutura da Procedure
 A procedure recebe os seguintes parâmetros:
 - `action_type` (INT) - Define a ação: 1️⃣ para inserção, 2️⃣ para atualização e 3️⃣ para remoção.
 - `emp_id` (INT) - Identificação do funcionário.
 - `emp_name` (VARCHAR) - Nome do funcionário (opcional para remoção).
 - `dept_id` (INT) - ID do departamento (opcional para atualização ou remoção).
+
 
 ### 📌 Exemplo de Uso:
 ```sql
@@ -64,5 +66,6 @@ CALL manage_employee(3, 101, NULL, NULL); -- ❌ Remover
 
 ## 🎯 Conclusão
 ✅ Com a implementação dos índices, a performance das consultas foi otimizada, garantindo respostas mais rápidas e eficiente uso dos recursos do SGBD. 
+
 ✅ A procedure implementada permite uma manipulação mais dinâmica dos dados, facilitando operações CRUD no banco de dados de maneira estruturada e segura. 🚀
 
